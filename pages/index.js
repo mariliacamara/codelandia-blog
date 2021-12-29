@@ -1,27 +1,10 @@
-import Head from 'next/head'
+import Header from "../components/Header";
 
 export default function Home() {
   return (
     <div className="content">
-      <Head>
-        <title>Codelandia</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main>
-        <div className="header">
-          <div className="headerTitle">
-            <h1 className="siteTitle">Codelândia</h1>
-            <h2 className="blogTitle">blog</h2>
-          </div>
-          <form className="form">
-            <input
-              className="searchInput"
-              type="text"
-              placeholder="Pesquise no blog"
-            />
-          </form>
-        </div>
+        <Header />
 
         <div className="container">
           <article>
@@ -106,41 +89,9 @@ export default function Home() {
           margin: 0rem 2rem;
         }
 
-        .header {
-          background: linear-gradient(88.27deg, #574ae8 0%, #3ea1db 100%);
-          padding: 2rem 2rem 3rem 2rem;
-          font-style: normal;
-          font-weight: 200;
-          font-size: 14px;
-          line-height: 30px;
-          text-align: right;
-          color: #ffffff;
-        }
-
-        .headerTitle,
         .articleHeader {
           display: flex;
           justify-content: space-between;
-        }
-
-        .form input {
-          width: 100%;
-          box-sizing: border-box;
-          margin-top: 3rem;
-          padding: 1rem;
-          background-color: rgba(255, 255, 255, 0.2);
-          border: none;
-          border-radius: 5px;
-          color: #fff;
-        }
-
-        .form input::placeholder {
-          color: #fff;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 22px;
-          opacity: 0.5;
         }
 
         article {
@@ -161,6 +112,7 @@ export default function Home() {
 
         article h1 {
           color: #1a202c;
+          font-weight: 400;
         }
 
         article p {
@@ -170,15 +122,6 @@ export default function Home() {
         @media (min-width: 900px) {
           .container {
             margin: 0rem 10rem;
-          }
-
-          .header {
-            padding: 2rem 10rem 3rem 10rem;
-          }
-
-          .grid {
-            width: 100%;
-            flex-direction: column;
           }
         }
       `}</style>
